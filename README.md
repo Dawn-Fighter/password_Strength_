@@ -1,56 +1,79 @@
-🔐 Password Strength Checker
-A powerful and interactive Password Strength Checker built with Python and Rich for a visually appealing terminal experience. This tool evaluates password security, estimates cracking time, and provides detailed analysis based on complexity criteria.
+# Password Strength Checker
 
-🚀 Features
-✅ Stylish Metasploit-like terminal UI with colorful output
-✅ Password strength classification: Very Weak, Weak, Moderate, Strong, Very Strong
-✅ Estimated crack time based on brute-force attack speeds
-✅ Detailed breakdown (length, uppercase, lowercase, digits, symbols)
-✅ Looping mode for continuous password testing
-✅ Verbose mode (-v) for in-depth analysis
-✅ Quit option (-q) to exit the tool
+A powerful tool to analyze password security and estimate the time required to crack it. This tool evaluates password strength based on length, character diversity, and complexity.
 
-🔧 Installation
-Clone the repository:
-bash
-Copy
-Edit
-git clone https://github.com/Dawn-Fighter//password-strength-checker.git
+## Features
+- Evaluates password strength as **Very Weak, Weak, Moderate, Strong, or Very Strong**.
+- Estimates the time required to crack the password based on standard GPU attack speeds.
+- Provides a **detailed analysis** of password composition when the `--verbose` flag is used.
+- Uses **Rich Library** for an enhanced terminal output experience.
+
+## Installation
+### Prerequisites
+Ensure you have Python installed (>=3.6). You can check your Python version with:
+```sh
+python --version
+```
+
+### Clone the Repository
+```sh
+git clone https://github.com/Dawn-Fighter/password-strength-checker.git
 cd password-strength-checker
-Install dependencies:
-bash
-Copy
-Edit
-pip install rich
-Run the tool:
-bash
-Copy
-Edit
+```
+
+### Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+## Usage
+Run the script using the following command:
+```sh
 python password_checker.py
-🎮 Usage
-Run the tool and enter passwords interactively:
+```
 
-bash
-Copy
-Edit
-python password_checker.py
-Or provide a password directly:
+You can also pass arguments:
+- **Check a password**
+  ```sh
+  python password_checker.py -p YourPassword123!
+  ```
+- **Verbose mode (detailed analysis)**
+  ```sh
+  python password_checker.py -p YourPassword123! -v
+  ```
+- **Quit the program**
+  ```sh
+  python password_checker.py -q
+  ```
 
-bash
-Copy
-Edit
-python password_checker.py -p "MySecureP@ss123"
-Enable verbose mode for more details:
+## Example Output
+```
+========================================
+   WELCOME TO PASSWORD STRENGTH CHECKER   
+========================================
+   A powerful tool to analyze password security
+========================================
 
-bash
-Copy
-Edit
-python password_checker.py -p "MySecureP@ss123" -v
-Quit the tool using:
+Initializing... Please wait.
 
-bash
-Copy
-Edit
-python password_checker.py -q
-🛡️ Security Note
-This tool is intended for personal security awareness and not for malicious use. Do not enter real passwords used for sensitive accounts.
+╔═════════════════════════════╗
+║     Password Analysis       ║
+╠═════════════════════════════╣
+║ Password Strength    │ Strong  ║
+║ Crack Time Estimate  │ 10 years║
+╚═════════════════════════════╝
+```
+
+## Contributing
+1. Fork the repository.
+2. Create your feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Open a pull request.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+[Your Name](https://github.com/Dawn-Fighter)
+
